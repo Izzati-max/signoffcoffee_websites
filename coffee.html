@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Signoff Coffee Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+     *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.3);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color:white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 20px;  
+}
+
+.logo: hover{
+    transform: scale(1.1);
+}
+
+.navbar {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a{
+    font-size: 15px;
+    color: white;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+
+}
+
+.navbar a:hover{
+    color: #734628;
+    border-bottom: 5px solid white;
+}
+.navbar a.active{
+    color: #734628;
+}
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color:  #EFE6DC;
+}
+
+
+.menu-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 120px 20px;
+}
+
+.menu-title {
+  font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: rosybrown;
+}
+
+.menu-title span {
+  font-weight: 400;
+      font-style: italic;
+      color: var(--accent);
+}
+
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+
+.menu-card {
+  background-color: #C89D7C;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.image-box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.menu-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #C2A77D;
+  font-weight: bold;
+}
+
+.menu-card .desc {
+  font-size: 13px;
+  color: #7a6a5d;
+  margin-bottom: 10px;
+}
+
+.menu-card .price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #C2A77D;
+}
+.menu-card:hover{
+  background-color: #FBF8F3; 
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.menu-card {
+    transition: all 0.4s ease;
+    background-color: #4B2E2B;
+}
+
+.menu-card:hover {
+    background-color: #FAF7F2; 
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+@media (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  }
+
+.feed-container {
+    padding: 20px;
+    background-color: #EFE6D8; 
+}
+
+.marquee-container {
+    background-color: #EFE6D8;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #1a3a8a; 
+    padding: 0 40px;
+}
+
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.feed-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 9 / 16;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feed-item img {
+    width: 300px;
+    height: 530px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.feed-item:hover img {
+    transform: scale(1.05);
+
+}
+
+@media (max-width: 768px) {
+    .feed-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .marquee-content span {
+        font-size: 18px;
+    }
+
+
+</style>
+
+</head>
+
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo">
+            Signoff Coffee
+        </a>
+
+        <i class='menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+        
+            <a href="index.html">HOME</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="coffee.html" class="active">COFFEE</a> 
+            <a href="non-coffee.html">NON-COFFEE</a>
+            <a href="contactus.html">CONTACT US</a>
+            
+        </nav>
+    </header>
+
+     <section class="menu-container">
+    <h2 class="menu-title" style="color: black;">Signoff <span style="color: brown;">Coffee <br>Coffee Series</span></h2>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="image-box">
+          <img src="images/caramel2.png" alt="Caramel Machiato">
+        </div>
+        <h3>Caramel Machiato</h3>
+        <p class="desc">Sweet caramel with rich coffee</p>
+        <p class="price">RM9</p>
+      </div>
+
+      <div class="menu-card">
+        <div class="image-box">
+          <img src="images/latte.png" alt="Ice Latte">
+        </div>
+        <h3>Ice Latte</h3>
+        <p class="desc">Smooth coffee with fresh milk</p>
+        <p class="price">RM9</p>
+      </div>
+
+      <div class="menu-card">
+        <div class="image-box">
+          <img src="images/spanish.png" alt="Spanish Latte">
+        </div>
+        <h3>Spanish Latte</h3>
+        <p class="desc">Rich coffee with creamy sweetness</p>
+        <p class="price">RM9</p>
+      </div>
+
+      <div class="menu-card">
+        <div class="image-box">
+          <img src="images/cappucino1.png" alt="Cappucino">
+        </div>
+        <h3>Cappucino</h3>
+        <p class="desc">Bold coffee with a smooth foam</p>
+        <p class="price">RM9</p>
+      </div>
+
+
+    </div>
+  </section>
+<section class="feed-container">
+  <div class="feed-grid">
+    <div class="feed-item">
+      <video width="300px" controls>
+        <source src="video/vdcoffee1.mp4" type="video/mp4" alt="Feed 1">Your browser does not support the video element
+        </video>
+
+    </div>
+    <div class="feed-item">
+      <img src="images/view1.jpg" alt="Feed 2">
+    </div>
+    <div class="feed-item">
+      <img src="images/ataskapal.jpg" alt="Feed 3">
+    </div>
+    <div class="feed-item">
+     <video width="300px" controls>
+        <source src="video/buatkopi.mp4" type="video/mp4" alt="Feed 1">Your browser does not support the video element</video>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-container bottom">
+  <div class="marquee-content reverse">
+    <span style="color: var(--coffee-dark);">CATCH US ON THE FEED</span>
+    <span style="color: var(--coffee-dark);">CATCH US ON THE FEED</span>
+    <span style="color: var(--coffee-dark);">FOLLOW US @SIGNOFFCOFFEE</span>
+    <span style="color: var(--coffee-dark);">FOLLOW US @SIGNOFFCOFFEE</span>
+    <span style="color: var(--coffee-dark);">FOLLOW US @SIGNOFFCOFFEE</span>
+  </div>
+</div>
+
+</body>
+</html>
